@@ -1,0 +1,8 @@
+- service: test-api
+  type: push
+  image_name: databraiddb/test-api
+  encrypted_dockercfg_path: dockercfg.encrypted
+- service: awsdeployment
+  command: aws ecs register-task-definition --cli-input-json file:///deploy/tasks/test-api.json
+- service: awsdeployment
+  command: aws ecs run-task --cluster databraid-cluster --task-definition test-api

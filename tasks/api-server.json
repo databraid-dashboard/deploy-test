@@ -1,0 +1,19 @@
+{
+  "containerDefinitions": [
+    {
+      "memory": 512,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 8000,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "name": "test-api",
+      "image": "databraiddb/test-api:latest",
+      "cpu": 10
+    }
+  ],
+  "family": "test-api"
+}
