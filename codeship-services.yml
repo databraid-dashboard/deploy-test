@@ -4,6 +4,6 @@ awsdeployment:
   volumes:
     - ./:/deploy
 
-api:
+test-api:
   build:
     dockerfile: Dockerfile
